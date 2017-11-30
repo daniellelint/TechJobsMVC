@@ -1,7 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 using System.Text;
+using Microsoft.AspNetCore.Mvc;
 
 namespace TechJobs.Models
 {
@@ -67,6 +69,7 @@ namespace TechJobs.Models
                         // Finding one field in a job that matches is sufficient
                         break;
                     }
+                    
                 }
             }
 
@@ -95,6 +98,7 @@ namespace TechJobs.Models
                 {
                     jobs.Add(row);
                 }
+                
             }
 
             return jobs;
